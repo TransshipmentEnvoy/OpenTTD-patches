@@ -15,8 +15,6 @@
 
 #include "script_config.hpp"
 
-/** The maximum number of operations for saving or loading the data of a script. */
-static const int MAX_SL_OPS             = 100000;
 /** The maximum number of operations for initial start of a script. */
 static const int MAX_CONSTRUCTOR_OPS    = 100000;
 /** Number of operations to create an instance of a script. */

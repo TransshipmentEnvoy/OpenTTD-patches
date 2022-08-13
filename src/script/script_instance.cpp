@@ -519,7 +519,7 @@ void ScriptInstance::Save()
 		bool backup_allow = ScriptObject::GetAllowDoCommand();
 		ScriptObject::SetAllowDoCommand(false);
 		try {
-			if (!this->engine->CallMethod(*this->instance, "Save", &savedata, MAX_SL_OPS)) {
+			if (!this->engine->CallMethod(*this->instance, "Save", &savedata, _settings_game.script.script_max_opcode_saveload)) {
 				/* The script crashed in the Save function. We can't kill
 				 * it here, but do so in the next script tick. */
 				SaveEmpty();
@@ -699,7 +699,7 @@ bool ScriptInstance::CallLoad()
 
 	/* Call the script load function. sq_call removes the arguments (but not the
 	 * function pointer) from the stack. */
-	if (SQ_FAILED(sq_call(vm, 3, SQFalse, SQFalse, MAX_SL_OPS))) return false;
+	if (SQ_FAILED(sq_call(vm, 3, SQFalse, SQFalse, _settings_game.script.script_max_opcode_saveload))) return false;
 
 	/* Pop 1) The version, 2) the savegame data, 3) the object instance, 4) the function pointer. */
 	sq_pop(vm, 4);
