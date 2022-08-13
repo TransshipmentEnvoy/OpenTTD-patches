@@ -1729,6 +1729,8 @@ STR_CONFIG_SETTING_SCRIPT_MAX_OPCODES_HELPTEXT                  :脚本在一个
 STR_CONFIG_SETTING_SCRIPT_MAX_MEMORY                            :每个脚本的内存上限: {STRING}
 STR_CONFIG_SETTING_SCRIPT_MAX_MEMORY_HELPTEXT                   :单个脚本强制终止前可占用的最大内存量。对于大地图可能需要增加。
 STR_CONFIG_SETTING_SCRIPT_MAX_MEMORY_VALUE                      :{COMMA} MiB
+STR_CONFIG_SETTING_SCRIPT_MAX_OPCODES_SL                           :读取/存储时允许的最大代码量: {STRING}
+STR_CONFIG_SETTING_SCRIPT_MAX_OPCODES_SL_HELPTEXT               :脚本在读取/存储游戏时可进行计算步数的最大值
 
 STR_CONFIG_SETTING_SERVINT_ISPERCENT                            :保养周期(百分数)： {STRING}
 STR_CONFIG_SETTING_SERVINT_ISPERCENT_HELPTEXT                   :选择触发车辆保养的条件，距离上一次保养的时间或者与最高可靠性的百分比
